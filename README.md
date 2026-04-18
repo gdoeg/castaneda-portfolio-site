@@ -17,8 +17,6 @@ The app renders a single-page portfolio with sections for navigation, hero conte
 ```text
 .
 ├── README.md
-├── contact.html
-├── index.html
 └── frontend/
 	├── package.json
 	├── vite.config.ts
