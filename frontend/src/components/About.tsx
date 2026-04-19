@@ -3,22 +3,16 @@ function About() {
     <section id="about" className="content">
       <h2>About Me</h2>
       <p>
-        I am a senior at Edmonds College pursuing a degree in Information Technology with a focus on
-        Application Development and Cloud Computing. Through my coursework and cohort projects, I
-        have built a strong foundation in software development, cloud infrastructure, and modern
-        deployment practices.
+        I’m a full-stack software engineer with production experience building AI-driven systems and scalable backend services.
       </p>
       <p>
-        My academic experience has given me hands-on exposure to developing applications, working
-        with cloud platforms, and applying best practices in system design and security. I enjoy
-        solving complex problems, building scalable solutions, and learning emerging technologies
-        that drive innovation.
+        At Sensatronix, I’ve shipped production features across web and mobile platforms, working with Go, React, and cloud 
+        infrastructure in a microservices environment. I’ve built APIs, designed multi-agent onboarding workflows, and contributed 
+        to systems used in real-world applications.
       </p>
       <p>
-        As I prepare to transition into my professional career, I am excited to apply my technical
-        skills, collaborative mindset, and passion for continuous learning to real-world projects. I
-        am especially interested in opportunities where I can contribute to cloud-native application
-        development, infrastructure automation, and software engineering.
+       I’m particularly interested in AI and multi-agent architectures, and I enjoy solving complex problems, working on collaborative
+        teams, and shipping features end-to-end.
       </p>
     </section>
   )
