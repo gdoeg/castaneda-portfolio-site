@@ -17,7 +17,7 @@ const projects: Project[] = [
     description:
       'AI-powered portfolio analysis platform that provides insights into stock performance and user investments.',
     techStack: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Groq', 'Finnhub API'],
-    githubUrl: '#',
+    githubUrl: 'https://github.com/gdoeg/portfolio-pilot',
     demoUrl: '#',
     featured: true,
     type: 'project',
@@ -39,7 +39,7 @@ const projects: Project[] = [
     description:
       'A multi-agent simulation exploring emergent social behavior from local interactions.',
     techStack: ['Python'],
-    githubUrl: '#',
+    githubUrl: 'https://github.com/gdoeg/emergent-societies',
     type: 'project',
   },
 ]
