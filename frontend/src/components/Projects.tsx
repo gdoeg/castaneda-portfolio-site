@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { fadeUpVariants, staggerContainerVariants, viewportOptions } from '../animations'
+
 type ProjectType = 'project' | 'experience'
 
 type Project = {
@@ -46,16 +49,25 @@ const projects: Project[] = [
 
 function Projects() {
   return (
-    <section id="projects" className="content projects-section">
-      <h2>Projects</h2>
+    <motion.section
+      id="projects"
+      className="content projects-section"
+      variants={staggerContainerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOptions}
+    >
+      <motion.h2 variants={fadeUpVariants}>Projects</motion.h2>
       <div className="projects-list">
         {projects.map((project) => {
           const itemType = project.type ?? 'project'
 
           return (
-            <article
+            <motion.article
               key={project.title}
               className={`project-card${project.featured ? ' project-card-featured' : ''}`}
+              variants={fadeUpVariants}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
               <div className="project-card-header">
                 <span className="project-type">{itemType === 'experience' ? 'Experience' : 'Project'}</span>
@@ -94,11 +106,11 @@ function Projects() {
                   ) : null}
                 </div>
               ) : null}
-            </article>
+            </motion.article>
           )
         })}
       </div>
-    </section>
+    </motion.section>
   )
 }
 
