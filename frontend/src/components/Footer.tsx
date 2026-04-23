@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2025 MySite. All rights reserved.</p>
+      <p>&copy; 2025 Gabriela Castaneda. All rights reserved.</p>
     </footer>
   )
 }
