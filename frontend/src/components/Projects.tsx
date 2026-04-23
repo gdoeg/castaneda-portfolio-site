@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { FaGithub, FaArrowRight } from 'react-icons/fa'
 import { fadeUpVariants, staggerContainerVariants, viewportOptions } from '../animations'
 
 type ProjectType = 'project' | 'experience'
@@ -9,6 +10,7 @@ type Project = {
   techStack: string[]
   githubUrl?: string
   demoUrl?: string
+  demoCtaLabel?: string
   featured?: boolean
   type?: ProjectType
   highlights?: string[]
@@ -21,7 +23,8 @@ const projects: Project[] = [
       'AI-powered portfolio analysis platform that provides insights into stock performance and user investments.',
     techStack: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Groq', 'Finnhub API'],
     githubUrl: 'https://github.com/gdoeg/portfolio-pilot',
-    demoUrl: '#',
+    demoUrl: 'https://portfoliopilotai.dev',
+    demoCtaLabel: 'Open App ->',
     featured: true,
     type: 'project',
   },
@@ -43,6 +46,8 @@ const projects: Project[] = [
       'A multi-agent simulation exploring emergent social behavior from local interactions.',
     techStack: ['Python'],
     githubUrl: 'https://github.com/gdoeg/emergent-societies',
+    demoUrl:'#',
+    demoCtaLabel: 'Open Dashboard ->',
     type: 'project',
   },
 ]
@@ -95,13 +100,15 @@ function Projects() {
               {project.githubUrl || project.demoUrl ? (
                 <div className="project-links">
                   {project.githubUrl ? (
-                    <a href={project.githubUrl} className="btn" target="_blank" rel="noreferrer">
+                    <a href={project.githubUrl} className="btn" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <FaGithub style={{ fontSize: '1rem' }} />
                       GitHub
                     </a>
                   ) : null}
                   {project.demoUrl ? (
-                    <a href={project.demoUrl} className="btn" target="_blank" rel="noreferrer">
-                      Live Demo
+                    <a href={project.demoUrl} className="btn" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      {project.demoCtaLabel?.replace(' ->', '') ?? 'Open App'}
+                      <FaArrowRight style={{ fontSize: '0.875rem' }} />
                     </a>
                   ) : null}
                 </div>

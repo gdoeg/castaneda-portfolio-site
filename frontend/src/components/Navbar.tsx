@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <header>
       <nav>
-        <h1 className="logo">MySite</h1>
+        <h1 className="logo">Gabriela Castaneda ✨</h1>
         <button
           type="button"
           className={`menu-toggle${isMenuOpen ? ' menu-toggle-open' : ''}`}
